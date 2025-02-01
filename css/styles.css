@@ -1,39 +1,67 @@
-body{
+body {
     display: flex;
-    flex-direction: column; /* Align items ontop of one another, default would be row */ 
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Body to be same height as viewport */
-    margin-top: -200px;
+    flex-direction: column; /* buttons will be on top of eachother - column alignment */
+    justify-content: center; /* Centre items vertically */
+    align-items: center; /* Centre items horizontally */
+    min-height: 100vh; 
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px; 
+    box-sizing: border-box; 
 }
 
-h1{
-    margin-bottom: 20px;
+h1 {
+    margin-bottom: 20px; 
 }
 
-div{
-    margin: 10px 0; /* Add a gap between buttons */
+div {
+    margin: 10px 0; /* Gap between buttons */
 }
 
-button{
-    width: 200px;
+button {
+    width: 150px;
     padding: 10px;
     background-color: #36454F;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 16px;
     text-align: center;
 }
 
-button a{
+button a {
     color: white;
     text-decoration: none;
     display: block;
-    width: 100%; /* Makes whole button clickable */
-    height: 100%; /* Makes whole button clickable */
-    
+    width: 100%; /* Anchor element to fill the whole of it's parent (button) making the whole button clickable */
+    height: 100%; /* Anchor element to fill the whole of it's parent (button) making the whole button clickable */
 }
+
+video {
+    max-width: 100%; 
+    height: auto; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%; 
+    height: auto; 
+    margin-top: 20px;
+}
+
+
+canvas {
+    display: none;
+}
+
+#capture {
+    display: none; 
+}
+
+#photo {
+    display: none;
+}
+
