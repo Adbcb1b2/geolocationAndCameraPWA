@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    flex-direction: column; /* Align items ontop of one another, default would be row */ 
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Body to be same height as viewport */
+    margin-top: -200px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+div{
+    margin: 10px 0; /* Add a gap between buttons */
+}
+
+button{
+    width: 200px;
+    padding: 10px;
+    background-color: #36454F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+button a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%; /* Makes whole button clickable */
+    height: 100%; /* Makes whole button clickable */
+    
+}
