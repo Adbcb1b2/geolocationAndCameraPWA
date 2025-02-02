@@ -13,7 +13,7 @@ const FILES_TO_CACHE = [
     "/icons/icon-512x512.png"
 ];
 
-// Cache items when service worker is istalled
+// Cache items when service worker is installed
 self.addEventListener("install", (event) => {
     // Wait until cache is populated before completing istall
     event.waitUntil(
