@@ -1,7 +1,7 @@
 {
     "name": "Geolocation and Camera PWA",
     "short_name": "GeoCamApp",
-    "start_url":"/index.html",
+    "start_url":"https://mi-linux.wlv.ac.uk/~2111532/PWA/index.html",
     "display": "standalone",
     "background_color":"#ffffff",
     "description": "PWA with Camera and Geolocation Functionality",
