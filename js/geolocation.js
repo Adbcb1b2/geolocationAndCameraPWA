@@ -1,4 +1,4 @@
-// Declare UI elements
+// Initialise UI elements
 const getLocationButton = document.getElementById("getLocation");
 const locationText = document.getElementById("location");
 
