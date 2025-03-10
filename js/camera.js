@@ -62,12 +62,19 @@ openCamera.addEventListener("click", async () => {
         });
         
     } catch (error) {
-        // If there's an error, log & alert user
-        console.error("Error accessing camera", error);
-        alert("Could not access camera. Please grant permission.");
-        // Redisplay the 'Open Camera' button to allow the user to try again
-        capture.style.display = "none";
-        // Hide the capture button to avoid confusion
-        openCamera.style.display = "block";
+        console.error("Error:", error);
+        // Check the user's camera permissions
+        navigator.permissions.query({ name: "camera" }).then((result) => {
+            // If already granted, something else went wrong
+            if (result.state === "granted") {
+                alert("Camera permission is granted but the camera could not be accessed. Please try again.");
+            // If permission previously denied, alert user to change settings
+            } else if (result.state === "denied") {
+                alert("Camera access has been denied. Please enable camera permissions in your browser settings.");
+            // If permission state cannot be confirmed, alert user
+            } else {
+                alert("Camera access could not be confirmed. Please check your browser settings.");
+            }
+        });
     }
 });

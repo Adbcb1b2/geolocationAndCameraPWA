@@ -27,11 +27,15 @@ getLocationButton.addEventListener("click", () => {
                     // If already granted, something else went wrong
                     if(result.state === "granted"){
                         alert("Permissions granted but cannot get location. Please try again", error);
-                        locationText.innerHTML = "Unable to get location. Please try again"
+                        locationText.innerHTML = "Permissions granted but cannot get location. Please try again";
                     // If permission previously denied, alert user to change settings
                     }else if (result.state === "denied"){
-                        alert("Cannot get location - Permissions previously denied. Please change the settings in your browser.");
-                        locationText.innerHTML = "Location permissions previously denied. Please change the settings in your browser."
+                        alert("Cannot get location - Permissions previously denied. Please enable geolocation permissions in your browser settings.");
+                        locationText.innerHTML = "Cannot get location - Permissions previously denied. Please enable geolocation permissions in your browser settings.";
+                    // If permission state cannot be confirmed, alert user
+                    }else{
+                        alert("Permission state cannot be confirmed. Please check your browswer settings or try again.");
+                        locationText.innerHTML("Permission state cannot be confirmed. Please check your browswer settings or try again.");
                     }
                 })
 
