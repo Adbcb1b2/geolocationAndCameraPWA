@@ -26,7 +26,6 @@ button {
     color: white;
     border: none;
     border-radius: 20px;
-    cursor: pointer;
     font-size: 16px;
     text-align: center;
 }
@@ -57,11 +56,11 @@ canvas {
     display: none;
 }
 
-#capture {
+#captureButton {
     display: none; 
 }
 
-#photo {
+#photoDisplay {
     display: none;
 }
 

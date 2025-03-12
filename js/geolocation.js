@@ -4,9 +4,10 @@ const locationText = document.getElementById("location");
 
 // When 'Get Location' button is clicked, get current location and display in HTML paragraph
 getLocationButton.addEventListener("click", () => {
+    
     // Check if the browser supports geolocation
     if("geolocation" in navigator){
-
+        locationText.innerHTML = "Getting location...";
         // Use navigator object to get current location
         navigator.geolocation.getCurrentPosition(
 
@@ -15,6 +16,7 @@ getLocationButton.addEventListener("click", () => {
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
                 const accuracy = position.coords.accuracy;
+                console.log("Getting location successful:", latitude, longitude, accuracy);
                 // Display location data in HTML paragraph
                 locationText.innerHTML = `Latitude: ${latitude} <br> Longitude: ${longitude} <br> Accuracy: ${accuracy}m`;
             }, 
@@ -35,7 +37,7 @@ getLocationButton.addEventListener("click", () => {
                     // If permission state cannot be confirmed, alert user
                     }else{
                         alert("Permission state cannot be confirmed. Please check your browswer settings or try again.");
-                        locationText.innerHTML("Permission state cannot be confirmed. Please check your browswer settings or try again.");
+                        locationText.innerHTML = "Permission state cannot be confirmed. Please check your browswer settings or try again.";
                     }
                 })
 
@@ -49,6 +51,6 @@ getLocationButton.addEventListener("click", () => {
     // If geolocation is not supported by the browser, alert user
     }else{
         alert("Geolocation not supported. Please try a different browser.");
-        locationText.innerHTML("Geolocation not supported in this browser.")
+        locationText.innerHTML = "Geolocation not supported in this browser.";
     }
 });

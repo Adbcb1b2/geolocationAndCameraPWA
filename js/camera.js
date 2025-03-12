@@ -1,9 +1,9 @@
 // Initialise UI components
 const video = document.getElementById("video");
 const canvas = document.getElementById("canvas");
-const photo = document.getElementById("photo");
+const photo = document.getElementById("photoDisplay");
 const openCamera = document.getElementById("openCamera");
-const capture = document.getElementById("capture");
+const capture = document.getElementById("captureButton");
 
 let stream;
 
@@ -62,7 +62,13 @@ openCamera.addEventListener("click", async () => {
         });
         
     } catch (error) {
-        console.error("Error:", error);
+        console.error("Error accessing camera:", error);
+        // Hide the capture button to avoid confusion
+        capture.style.display = "none";
+
+        // Resdisplay the 'Open Camera' button to allow the user to try again
+        openCamera.style.display = "block";
+        
         // Check the user's camera permissions
         navigator.permissions.query({ name: "camera" }).then((result) => {
             // If already granted, something else went wrong
