@@ -34,10 +34,10 @@ getLocationButton.addEventListener("click", () => {
                     }else if (result.state === "denied"){
                         alert("Cannot get location - Permissions previously denied. Please enable geolocation permissions in your browser settings.");
                         locationText.innerHTML = "Cannot get location - Permissions previously denied. Please enable geolocation permissions in your browser settings.";
-                    // If permission state cannot be confirmed, alert user
+                    // If permission state cannot be confirmed, alert user to check their browser or device settings
                     }else{
-                        alert("Permission state cannot be confirmed. Please check your browswer settings or try again.");
-                        locationText.innerHTML = "Permission state cannot be confirmed. Please check your browswer settings or try again.";
+                        alert("Please check browser or device location settings and try again.");
+                        locationText.innerHTML = "Please check browser or device location settings and try again.";
                     }
                 })
 
