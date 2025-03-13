@@ -79,7 +79,7 @@ openCamera.addEventListener("click", async () => {
                 alert("Camera access has been denied. Please enable camera permissions in your browser settings.");
             // If permission state cannot be confirmed, alert user
             } else {
-                alert("Camera access could not be confirmed. Please check your browser settings.");
+                alert("Please check browser or device camera settings and try again.");
             }
         });
     }
