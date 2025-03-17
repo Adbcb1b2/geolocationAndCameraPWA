@@ -24,8 +24,8 @@ openCamera.addEventListener("click", async () => {
             stream.getTracks().forEach(track => track.stop());
         }
 
-        // Wait until promise is resolved, then get video stream
-        stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        // Wait until promise is resolved, then get video stream (enivronment = rear camera)
+        stream = await navigator.mediaDevices.getUserMedia({ video:{ facingMode: "environment" } });
 
         // When camera stream is available, display it in the video element
         video.srcObject = stream;
